@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'open Sans', 'Sans-serif';
+            background-repeat: no-repeat;
+            background-image: url("./body4.jpg");
+            background-size: 100% 120%;
+        }
+        #b {
+            margin-left: 440px;
+            margin-top: 60px;
+            width: 320px;
+            height: 520px;
+            background-color: #eaedef;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        #result {
+            height: 120px;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        #keyborad {
+            height: 400px;
+        }
+
+        .operator,
+        .number,
+        .empty {
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            float: left;
+            border-radius: 50%;
+            border-width: 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .number {
+            background-color: #eaedef;
+        }
+
+        .number,
+        .operator {
+            cursor: pointer;
+        }
+
+        .operator:active,
+        .number:active {
+            font-size: 20px;
+        }
+
+        .operator:focus,
+        .number:focus {
+            outline: 0;
+        }
+
+        #div {
+            background-color: seagreen;
+        }
+
+        #mul {
+            background-color: orange;
+        }
+
+        #sum {
+            background-color: palevioletred;
+        }
+
+        #sub {
+            background-color: rgb(107, 19, 107);
+        }
+
+        #equal {
+            background-color: rgb(238, 160, 88);
+        }
+
+        #value {
+            text-align: right;
+            font-size: 40px;
+            text-align: right;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* media query */
+
+        @media only screen and (max-width: 600px) {
+            #b {
+                margin-left: 38px;
+
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            #b{
+                margin-left: 30px;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            #b {
+                margin-left: 200px;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            #b {
+                margin-left: 300px;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            #b {
+                margin-left: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="b">
+        <div id="result">
+            <p id="value"></p>
+        </div>
+        <div id="keyboard">
+            <button class="number" id="C" onclick="clear1()">C</button>
+            <button class="number" id="CE" onclick="clearEntry()">CE</button>
+            <button class="number" id="mod" onclick="mod()">%</button>
+            <button class="operator" id="div" onclick="divi()">&#247</button>
+            <button class="number" id="7" onclick="seven7()">7</button>
+            <button class="number" id="8" onclick="eight8()">8</button>
+            <button class="number" id="9" onclick="nine9()">9</button>
+            <button class="operator" id="mul" onclick="mul()">&times</button>
+            <button class="number" id="4" onclick="four4()">4</button>
+            <button class="number" id="5" onclick="five5()">5</button>
+            <button class="number" id="6" onclick="six6()">6</button>
+            <button class="operator" id="sub" onclick="sub()">-</button>
+            <button class="number" id="1" onclick="one1()">1</button>
+            <button class="number" id="2" onclick="two2()">2</button>
+            <button class="number" id="3" onclick="three3()">3</button>
+            <button class="operator" id="sum" onclick="sum()">+</button>
+            <button class="number" id="0" onclick="zero1()">0</button>
+            <button class="number" id="00" onclick="dubZero()">00</button>
+            <button class="number" id="." onclick="point1()">.</button>
+            <button class="operator" id="equal" onclick="equal1()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
